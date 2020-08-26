@@ -3,8 +3,7 @@ import React, { useState } from 'react'
 const FavSummary=({project})=>{
 
     const id=project.id
-    //console.log(project.fav)
-    
+
     return(
         <div className="card z-depth-0 user-summary">
                 <div className="card content grey-text text-darken-3">

@@ -67,13 +67,6 @@ export const editProject =(project, id)=>{
 
     const firestore = getFirestore();
     const profile = getState().firebase.profile;
-    // const authorId = getState().firestore.data.farmers['04VWaeu8VMfW7LslfRAh'];
-    // const seePath=getState().firestore.data.farmers[project]
-    // console.log('This is see Path', seePath)
-    // console.log(authorId); 
-    // console.log(id)
-    // console.log('Here is ID', id);
-    // console.log(project[id])
  
     var firstName=project.ufName;
     var lastName = project.ulName;
@@ -83,48 +76,6 @@ export const editProject =(project, id)=>{
     console.log(firstName+ ' '+lastName)
     console.log(project)
     console.log(id);
-
-    // firestore.collection('farmers').doc('04VWaeu8VMfW7LslfRAh').update({
-    //   ufName:firstName,
-    //   ulName:lastName,
-    //   address:address,
-    //   phone:phone,
-    //   crop:crop
-    // }).then(()=>{
-    //   dispatch({type: 'EDIT_USER',project});
-    // }).catch((err)=>{
-    //   dispatch({type: 'EDIT_USER_ERROR',err});
-    // })
-     
-
-    
-    // firestore.collection('farmers').doc([project]).update({
-    //   ufName:"TESTER",
-    //   ulName:"LETS SEE",
-    // }).then(()=>{
-    //   dispatch({type: 'EDIT_USER',project});
-    // })
-    // .catch((err)=>{
-    //       dispatch({type: 'EDIT_USER_ERROR',err});
-    //   })
-   
-  
-    //  var fav=false;
-    // console.log(fav);
-    // firestore.collection('farmers').add({
-    //     ...project,
-    //     authorFirstName: profile.firstName,
-    //     authorLastName: profile.lastName,
-    //     authorId: authorId,
-    //     createdAt:new Date(),
-    //     fav:fav
-
-    // }).then(()=>{
-
-    //     dispatch({type: 'CREATE_USER',project});
-    // }).catch((err)=>{
-    //     dispatch({type: 'CREATE_USER_ERROR',err});
-    // })
 }
 }
 
@@ -142,9 +93,6 @@ export const newEdit=(id)=>{
     var crop = getState().firestore.data.farmers[id].crop;
     console.log(firstName+ ','+ lastName+','+address+','+phone+','+crop)
     console.log(dekha)
-    // firestore.collection('farmers').doc(dekha).update({
-    //   ufName:firstName
-    // })
   }
 }
 

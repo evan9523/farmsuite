@@ -6,63 +6,37 @@ import {deleteProject, toggleFavItem, editProject, newEdit} from '../../store/re
 import EditUser from './EditUser'
 
  const UserDetails= (props)=> {
-    //  const id= props.match.params.id;
-    //  console.log(props)
-
     const [showEditBox, setshowEditBox] = useState(false);
     const [fav, setfav] = useState(true);
     const [grab,setGrab]=useState('')
     
     const toggleFav=()=>{
-        // console.log(project.fav)
         setfav(!fav)
         const { id } = props;
-        // console.log(props);
-        
-        // // // e.preventDefault();
-       
-        
-
         props.toggleFavItem(id);
         console.log('jell')
-        // // alert('Deleted')
         props.history.push('/');
         
        
     }
     const handleDelete=(e)=>{
-        // alert('Delete Working')
         const { id } = props;
         console.log(props);
-        
-        // e.preventDefault();
         props.deleteProject(id);
-        // alert('Deleted')
         props.history.push('/');
-        // you can push to dashboard after deleting...
     }
     const toggleEditView=()=>{
         setshowEditBox(!showEditBox);
         const { id } = props;
-    //     // console.log(props);
-        // props.editProject(id);
     }
    
     const {project}=props;
+
+
     const handleEdit=()=>{
-        // alert('Peyechi')
-    //    console.log('Reached HandleEdit');
-       
-    //    editProject()
-        const { id } = props;
-    //     // console.log(props);
+    const { id } = props;
     setshowEditBox(!showEditBox);
     props.newEdit(id);
-        // props.editProject(project,id);
-        // console.log(props)
-
-      
-        // props.history.push('/edit/'+id);
     }
 
     const handleChange=(e)=>{
@@ -103,16 +77,7 @@ import EditUser from './EditUser'
        ( <a class="waves-effect waves-light btn-small pink darken-2" onClick={()=>toggleFav()} ><i class="material-icons left">favorite</i>Unmark Favourite</a>):
        (<p>Awesome ! Now lets see the changes</p>)
         }
-        {/* <a class="waves-effect waves-light btn-small pink darken-2" onClick={()=>toggleFav()} ><i class="material-icons left">favorite</i>Mark as Favourite</a> */}
-          
-            {/* <a class="waves-effect waves-light btn-small" onClick={()=>handleEdit()} style={{marginLeft:20}}><i class="material-icons left">create</i>Edit</a> */}
-            {/* {
-                showEditBox?(
-                    <a class="waves-effect waves-light btn-small" onClick={()=>handleEdit()} style={{marginLeft:20}}><i class="material-icons left">save</i>Save</a>   
-                ):(
-                    <a class="waves-effect waves-light btn-small" onClick={()=>handleEdit()} style={{marginLeft:20}}><i class="material-icons left">create</i>Edit</a>
-                )
-            } */}
+
             <a class="waves-effect waves-light btn-small red darken-4" onClick={()=>handleDelete()} style={{marginLeft:20}}><i class="material-icons left">delete</i>Delete</a>
             </div>
         </div>
@@ -150,16 +115,6 @@ const mapStateToProps=(state, ownProps)=>{
     }
 }
 
-// const mapDistpacthToProps = (state,dispatch,ownProps) => {
-// console.log(state)
-//     // const id= ownProps.match.params.id;
-//     // const projects = state.firestore.data.farmers;
-//     // const project = projects?projects[id]:null
-//     // console.log('From Delete' +id)
-//     return {
-//         deleteProject: (id) => dispatch(deleteProject(id))
-//     }
-// }
 const mapDistpacthToProps = (dispatch) => {
     return {
         deleteProject: (id) => dispatch(deleteProject(id)),

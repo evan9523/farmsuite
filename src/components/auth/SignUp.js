@@ -22,7 +22,6 @@ import {signin, signUp} from '../../store/reducers/Actions/authActions'
      
      handleSubmit=(e)=>{
         e.preventDefault();
-        // console.log(this.state);
         this.props.signUp(this.state)
     }
     render() {
