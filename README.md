@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -67,19 +66,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-=======
-# farmsuite
-Welcome to Farmsuite : A basic farmer portal
-
-# Built With
-React-Redux-Thunk-Firebase-Firestore
-
-# See it in Action here
-https://farmsuite-13d43.firebaseapp.com/
-
-# Run
-1.Clone the repo
-2.Install dependencies (yarn)
-3.Replace fbConfig content with your config
-4. yarn start
->>>>>>> a3da888ab26060b625debcc2845931a2c266c1ad
