@@ -12,7 +12,6 @@ var firebaseConfig = {
   appId: "1:442280337489:web:05a31a3f0a187045105870",
   measurementId: "G-B7LF9J5MMB"
 };
-  // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.firestore().settings({timestampsInSnapshots:true});
   
