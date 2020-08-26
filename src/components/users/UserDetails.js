@@ -52,17 +52,23 @@ import EditUser from './EditUser'
         <div className="card z-depth">
             <div className="card-content">
                 <span className="card-title">
+            
+                <span class="material-icons" style={{color:"#311b92"}}>account_circle</span>
+                
                     {project.ufName} {project.ulName}
                 </span>
                 
                 <p>
+                <span class="material-icons" style={{color:"#311b92"}}>call</span>
                     {project.phone}
 
                 </p>
                 <p>
+                <span class="material-icons" style={{color:"#311b92"}}>location_on</span>
                     {project.address}
                 </p>
                 <p>
+                <span class="material-icons" style={{color:"#311b92"}}>eco</span>
                     {project.crop}
                 </p>
 
