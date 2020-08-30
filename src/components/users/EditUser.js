@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import {newEdit} from '../../store/reducers/Actions/projectActions'
+import {editProject} from '../../store/reducers/Actions/projectActions'
 import {  Redirect } from 'react-router-dom'
 
  class EditUser extends Component {
@@ -24,8 +24,12 @@ import {  Redirect } from 'react-router-dom'
      
      handleSubmit=(e)=>{
         e.preventDefault();
-        console.log(this.state);
-        this.props.newEdit(this.state)
+        // console.log(this.state);
+        var newData=[]
+        newData = this.state;
+
+        console.log(newData)
+        // this.props.editProject(this.state)
         // this.props.history.push('/');
     }
     render() {
@@ -76,7 +80,7 @@ const mapStateToProps = (state)=>{
 
 const mapDispatchToProps=(dispatch)=>{
     return{
-        newEdit:(id)=>dispatch(newEdit(id))
+        editProject:(project,id)=>dispatch(editProject(project,id))
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(EditUser)

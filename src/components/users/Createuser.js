@@ -33,7 +33,7 @@ import {  Redirect } from 'react-router-dom'
         return (
             <div className="container">
                 <form className="white" onSubmit={this.handleSubmit}>
-                    <h5 className="grey-text text-darken-3">Add New User</h5>
+                    <h5 className="grey-text text-darken-3">Add New Farmer</h5>
                     <div className="input-field">
                         <label htmlFor="ufName">Firstname</label>
                         <input type="text" id="ufName" onChange={this.handleChange}></input>

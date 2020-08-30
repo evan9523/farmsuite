@@ -73,9 +73,19 @@ export const editProject =(project, id)=>{
     var address = project.address;
     var phone = project.phone;
     var crop = project.crop;
-    console.log(firstName+ ' '+lastName)
-    console.log(project)
-    console.log(id);
+    // console.log(firstName+ ' '+lastName)
+    // console.log(project)
+    // console.log(id);
+    var newArray=[]
+    newArray = project;
+    console.log(newArray,id)
+    firestore.collection('farmers').doc(id).update({
+      project:newArray
+    }).then(()=>{
+      console.log('project Updated successfully')
+    }).catch(err=>{
+      console.log('Error',err)
+    })
 }
 }
 

@@ -17,7 +17,7 @@ class Dashboard extends Component{
             <div className="dashboard container">
                 <div className="row">
                     <div className="col s12 m6">
-                    <span className="card-title" style={{fontSize:32,marginLeft:-5}}>All Users</span>
+                    <span className="card-title" style={{fontSize:32,marginLeft:-5}}>All Farmers</span>
                         <UserList projects={projects}/>
                     </div>
                     <div className="col s12 m5 offset-m1">
